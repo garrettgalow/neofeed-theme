@@ -22,9 +22,9 @@
     <link rel="me" href="{{ . }}" />{{ end }}
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ " css/layout.css " | absURL}}" crossorigin="anonymous" media="screen"> {{ if .Site.Params.customCSS }}
+    <link rel="stylesheet" href="{{ "css/layout.css" | absURL}}" crossorigin="anonymous" media="screen"> {{ if .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ .Site.Params.customCSS | absURL }}" crossorigin="anonymous" media="screen"> {{ end }} {{ $skin := printf "%s" (.Site.Params.skin | default "minimal") }}
-    <link rel="stylesheet" href="{{ printf " %s%s%s " "skins/ " $skin ".css " | absURL }}" crossorigin="anonymous" media="screen">
+    <link rel="stylesheet" href="{{ printf "%s%s%s" "skins/" $skin ".css" | absURL }}" crossorigin="anonymous" media="screen">
 
     <!-- Webmention -->
     {{ with .Site.Params.webmentionUrl }}
