@@ -6,7 +6,7 @@
         <div id="card" class="md">
             <h1 class="p-name">{{ with .Site.Author.name }}{{ . }}{{ end }}</h1>
             <address class="properties">
-                <a class="u-url u-uid" href="https://www.icloud.com/sharedalbum/#B0qG6XBubJ5LxOx">Here are some photos of us!</a>
+                <a  style="font-size:1.125rem"class="u-url u-uid" href="https://www.icloud.com/sharedalbum/#B0qG6XBubJ5LxOx">Here are some photos of us!</a>
                 {{ with .Site.Author.email }} {{ $.Site.Params.separator | default "∙" }}
                 <a class="u-email" href="mailto:{{ . }}">{{ . }}</a>
                 {{ end }}
