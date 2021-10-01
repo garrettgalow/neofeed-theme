@@ -21,8 +21,7 @@
     </div>
     <div class="flex right">
         {{ range (.GetTerms "tags") }}
-        <!--attempt at hiding the address block-->
-        <!--<a class="p-category properties" id="tag" href="{{ .Permalink }}">#{{.LinkTitle}}</a>-->
+        <a class="p-category properties" id="tag" href="{{ .Permalink }}">#{{.LinkTitle}}</a>
         {{ end }}
     </div>
 </div>
