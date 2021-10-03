@@ -2,7 +2,7 @@
 <!-- home page -->
 <ul id="feed__ul" class="h-feed">
     <!--{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}-->
-    {{ $pages := where site.RegularPages "Tags" "=" "home" }} 
+    {{ $pages := where site.Pages "Section" "!=" "posts" }} 
     {{ $paginator := .Paginate $pages }}
     {{ range $paginator.Pages }}
     {{ if .Content }}
