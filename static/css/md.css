@@ -4,18 +4,22 @@
     border-bottom: 1px solid var(--accent);
 }
 
+.md h1 {
+    font-size: calc(1.5rem * var(--scale));
+}
+/*
 .md h1, .md h2, .md h3, .md h4 {
-    padding-top: 1rem;
+    padding-top: .2rem;
 }
 
 .md p {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
 .md p:last-child {
-    padding-bottom: 1.5rem !important;
+    padding-bottom: .5rem !important;
 }
-
+*/
 .md ul, ol {
     padding: 1rem;
     padding-left: 2rem;
@@ -32,7 +36,7 @@
 
 .properties {
     color: var(--color-secondary);
-    font-size: calc(0.8rem * var(--scale));
+    font-size: calc(1rem * var(--scale));
 }
 
 blockquote {
