@@ -1,9 +1,7 @@
 {{ define "feed" }}
 <!-- home page -->
 <ul id="feed__ul" class="h-feed">
-    <!--{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}-->
-    {{ $mytag := "public" }}
-    {{ $pages := .Site.Taxonomies.tags.mytag.Pages }} 
+    {{ $pages := where site.RegularPages ".Params.public" true }}
     {{ $paginator := .Paginate $pages }}
     {{ range $paginator.Pages }}
     {{ if .Content }}

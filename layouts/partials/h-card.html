@@ -5,6 +5,14 @@
             src="{{ with .Site.Author.image }}{{ . | absURL }}{{ else }}https://picsum.photos/120.webp{{ end }}">
         <div id="card" class="md">
             <h1 class="p-name">{{ with .Site.Author.name }}{{ . }}{{ end }}</h1>
+            <h3><p class="p-note">
+                {{ $bio := "author/about.md" }}
+                {{ if (fileExists $bio) -}}
+                {{ readFile $bio | markdownify }}
+                {{ else }}
+                {{ .Site.Author.about }}
+                {{- end }}
+            </p></h3>
             <address class="properties">
                 <a  style="font-size:1.125rem"class="u-url u-uid" href="https://www.icloud.com/sharedalbum/#B0qG6XBubJ5LxOx">➡️ Here are some photos of us and more!</a>
                 {{ with .Site.Author.email }} {{ $.Site.Params.separator | default "∙" }}
@@ -17,14 +25,6 @@
                 {{ with .Site.Params.twitteruser }} {{ $.Site.Params.separator | default "∙" }}
                 <a rel="me" href="https://twitter.com/{{ . }}">twitter</a>{{ end }}
             </address>
-            <p class="p-note">
-                {{ $bio := "author/about.md" }}
-                {{ if (fileExists $bio) -}}
-                {{ readFile $bio | markdownify }}
-                {{ else }}
-                {{ .Site.Author.about }}
-                {{- end }}
-            </p>
         </div>
     </div>
 </div>
