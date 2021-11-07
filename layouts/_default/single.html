@@ -8,9 +8,9 @@
                     <time class="hidden dt-published">{{ .Date }}</time>
                     <div class="flex properties__row ">
                         <div rel="author" class="flex left p-author h-card">
-                            <img class="u-photo"
+                            <a href="/"><img class="u-photo"
                                 src="{{ with $.Site.Author.image }}{{ . | absURL }}{{ else }}https://picsum.photos/120.webp{{ end }}"
-                                alt="{{.Site.Author.name}}" id="author-img">
+                                alt="{{.Site.Author.name}}" id="author-img"></a>
                             <div>
                                 <p rel="me" class="p-name" id="author-name">
                                     {{ with .Params.author }}
