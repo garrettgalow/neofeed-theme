@@ -7,22 +7,24 @@
 .md h1 {
     font-size: calc(1.5rem * var(--scale));
 }
-/*
-.md h1, .md h2, .md h3, .md h4 {
-    padding-top: .2rem;
+
+.md h2, .md h3, .md h4 {
+    padding-top: .5rem;
 }
 
 .md p {
-    padding-top: 1rem;
+    padding-top: .5rem;
+    font-size: calc(.9rem * var(--scale));
 }
 
 .md p:last-child {
     padding-bottom: .5rem !important;
 }
-*/
+
 .md ul, ol {
     padding: 1rem;
     padding-left: 2rem;
+    font-size: calc(.9rem * var(--scale));
 }
 
 .md table {
