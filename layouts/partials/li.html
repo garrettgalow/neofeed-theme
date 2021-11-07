@@ -47,11 +47,9 @@
       {{ end }}
           {{ .Summary | markdownify }}
           {{ $img := (.Resources.ByType "image").GetMatch "*" }}
-          {{ if .Truncated }}...
           <div id="open">
-            <a href="{{ .Permalink }}" class="properties"><strong>[ open me ]</strong></a>
+            <a href="{{ .Permalink }}" class="properties"><strong>[ Open for more details ]</strong></a>
           </div>
-          {{ end }}
         </article>
         {{ partial "properties" . }}
   </div>
